@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARV AI Minecraft Bot</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <h1>ARV AI Minecraft Bot</h1>
+          <p>Java Edition control dashboard</p>
+        </div>
+        <div class="status-pill" id="statusPill">Offline</div>
+      </header>
+
+      <main class="grid">
+        <section class="card overview">
+          <h2>Overview</h2>
+          <div class="two-col">
+            <div><label>Server</label><div id="serverInfo">-</div></div>
+            <div><label>Ping</label><div id="pingInfo">-</div></div>
+            <div><label>Health</label><div id="healthInfo">-</div></div>
+            <div><label>Food</label><div id="foodInfo">-</div></div>
+            <div><label>Position</label><div id="positionInfo">-</div></div>
+            <div><label>Dimension</label><div id="dimensionInfo">-</div></div>
+          </div>
+        </section>
+
+        <section class="card console">
+          <h2>Console</h2>
+          <div class="console-toolbar">
+            <input id="commandInput" placeholder="!status or type a natural-language instruction" />
+            <button id="sendCommandButton">Send</button>
+          </div>
+          <div id="logBox" class="log-box"></div>
+        </section>
+
+        <section class="card control">
+          <h2>AI Control</h2>
+          <textarea id="aiInput" rows="4" placeholder="Follow me, gather oak logs, go to 100 64 100"></textarea>
+          <div class="button-row">
+            <button id="runAiButton">Run Task</button>
+            <button id="stopBotButton">Stop</button>
+          </div>
+          <div class="current-decision" id="currentDecision">Idle</div>
+        </section>
+
+        <section class="card inventory">
+          <h2>Inventory</h2>
+          <div id="inventoryList">No inventory yet.</div>
+        </section>
+
+        <section class="card settings">
+          <h2>Settings</h2>
+          <div class="stacked">
+            <input id="hostInput" placeholder="Host" value="localhost" />
+            <input id="portInput" placeholder="Port" value="25565" />
+            <input id="usernameInput" placeholder="Username" value="ARVBot" />
+            <input id="versionInput" placeholder="Version" value="1.20.4" />
+            <button id="connectButton">Connect</button>
+            <button id="disconnectButton">Disconnect</button>
+          </div>
+        </section>
+
+        <section class="card tasks">
+          <h2>Tasks</h2>
+          <div id="taskList">No tasks.</div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
